@@ -1,38 +1,81 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  // oioioioi
+function compareTrue(x, y) {
+  if (x && y){
+    return true
+  }
+  return false
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  let calculo = base * altura / 2
+  return calculo
 }
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let arr = str.split(' ')
+
+  return arr
 }
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  let lastName = strArray.slice(-1) + ', ' + strArray[0]
+
+  return lastName
+}
+// Desafio 5
+function footballPoints(wins, ties) {
+  wins = wins * 3
+  ties = ties * 1
+  return wins + ties
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(tamanhoArr) {
+  let maiorNumero = 0
+
+  for (let index in tamanhoArr){
+    
+    if (tamanhoArr[index] > maiorNumero){
+      maiorNumero = tamanhoArr[index]
+    }
+  }
+
+  let indexMaiorNumero = maiorNumero
+
+  let vezesAparece = 0
+
+  for (let index2 = 0; index2 < tamanhoArr.length; index2++){
+    if (indexMaiorNumero === tamanhoArr[index2]){
+      vezesAparece++
+    } else if (tamanhoArr[index2] < 0){
+      return 1
+    }
+  }
+  return vezesAparece
 }
 
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+ let distanceCat1 = Math.abs(cat1 - mouse)
+ let distanceCat2 = Math.abs(cat2 - mouse)
+  
+  if (distanceCat2 > distanceCat1){
+    return 'cat1'
+  } else if (distanceCat1 > distanceCat2){
+    return 'cat2'
+  } 
+  return 'os gatos trombam e o rato foge'
 }
+
+console.log(catAndMouse(10, 4, 22))
+
 
 // Desafio 8
 function fizzBuzz() {
