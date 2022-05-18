@@ -25,7 +25,7 @@ function splitSentence(str) {
 function concatName(strArray) {
   let lastName = strArray.slice(-1) + ', ' + strArray[0];
 
-  return ;
+  return lastName;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -74,8 +74,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArr) {
+  
+  let strArr = [];
+  
+  for (let index = 0; index < numberArr.length; index += 1){
+
+  if (numberArr[index] % 5 === 0 && numberArr[index] % 3 === 0){
+    strArr.push('fizzBuzz');
+  } 
+  else if (numberArr[index] % 5 === 0){
+    strArr.push('buzz');
+  } 
+  else if (numberArr[index] % 3 === 0 ){
+    strArr.push('fizz');
+  } else {
+    strArr.push('bug!');
+  }
+}
+  return strArr;
 }
 
 // Desafio 9
