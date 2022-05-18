@@ -12,7 +12,6 @@ function calcArea(base, altura) {
   return calculo;
 }
 
-
 // Desafio 3
 function splitSentence(str) {
   let arr = str.split(' ');
@@ -20,28 +19,25 @@ function splitSentence(str) {
   return arr;
 }
 
-
 // Desafio 4
 function concatName(strArray) {
-  let lastName = strArray.slice(-1) + ', ' + strArray[0];
+  let lastName = `${strArray.slice(-1)}, ${strArray[0]}`;
 
   return lastName;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = wins * 3;
-  ties = ties * 1;
+  wins *= 3;
+  ties *= 1;
   return wins + ties;
 }
-
 
 // Desafio 6
 function highestCount(tamanhoArr) {
   let maiorNumero = 0;
 
-  for (let index in tamanhoArr){
-    
-    if (tamanhoArr[index] > maiorNumero){
+  for (let index in tamanhoArr) {
+    if (tamanhoArr[index] > maiorNumero) {
       maiorNumero = tamanhoArr[index];
     }
   }
@@ -51,9 +47,9 @@ function highestCount(tamanhoArr) {
   let vezesAparece = 0;
 
   for (let index2 = 0; index2 < tamanhoArr.length; index2 += 1) {
-    if (indexMaiorNumero === tamanhoArr[index2]){
+    if (indexMaiorNumero === tamanhoArr[index2]) {
       vezesAparece += 1;
-    } else if (tamanhoArr[index2] < 0){
+    } else if (tamanhoArr[index2] < 0) {
       return 1;
     }
   }
@@ -62,36 +58,32 @@ function highestCount(tamanhoArr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- let distanceCat1 = Math.abs(cat1 - mouse);
- let distanceCat2 = Math.abs(cat2 - mouse);
-  
-  if (distanceCat2 > distanceCat1){
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+
+  if (distanceCat2 > distanceCat1) {
     return 'cat1';
-  } else if (distanceCat1 > distanceCat2){
+  } if (distanceCat1 > distanceCat2) {
     return 'cat2';
-  } 
+  }
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numberArr) {
-  
   let strArr = [];
-  
-  for (let index = 0; index < numberArr.length; index += 1){
 
-  if (numberArr[index] % 5 === 0 && numberArr[index] % 3 === 0){
-    strArr.push('fizzBuzz');
-  } 
-  else if (numberArr[index] % 5 === 0){
-    strArr.push('buzz');
-  } 
-  else if (numberArr[index] % 3 === 0 ){
-    strArr.push('fizz');
-  } else {
-    strArr.push('bug!');
+  for (let index = 0; index < numberArr.length; index += 1) {
+    if (numberArr[index] % 5 === 0 && numberArr[index] % 3 === 0) {
+      strArr.push('fizzBuzz');
+    } else if (numberArr[index] % 5 === 0) {
+      strArr.push('buzz');
+    } else if (numberArr[index] % 3 === 0) {
+      strArr.push('fizz');
+    } else {
+      strArr.push('bug!');
+    }
   }
-}
   return strArr;
 }
 
