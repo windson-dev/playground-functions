@@ -52,14 +52,13 @@ function highestCount(tamanhoArr) {
 
   for (let index2 = 0; index2 < tamanhoArr.length; index2 += 1) {
     if (indexMaiorNumero === tamanhoArr[index2]){
-      vezesAparece++;
+      vezesAparece += 1;
     } else if (tamanhoArr[index2] < 0){
       return 1;
     }
   }
   return vezesAparece;
 }
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -73,7 +72,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } 
   return 'os gatos trombam e o rato foge';
 }
-
 
 // Desafio 8
 function fizzBuzz() {
